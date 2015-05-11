@@ -23,6 +23,10 @@ include_recipe "build-essential"
 include_recipe "boost"
 include_recipe "python"
 
+package 'libssl-dev'
+package 'libevent-dev'
+package 'libboost-test-dev'
+
 case node.platform_family
 when "rhel", "fedora"
   %w{ flex bison libtool autoconf pkgconfig }.each do |pkg|
